@@ -1,9 +1,9 @@
 # Optimism Season 9 Grants Council Application
 
 > **Program**: Optimism Season 9 Grants Council
-> **Status**: Applications NOW OPEN
-> **Source**: https://gov.optimism.io
-> **Focus**: Growth (DEX liquidity in priority pairs + trading fees)
+> **Status**: ✅ CONFIRMED LIVE — "Season 9 Grants Council: Applications Now Open" (250 views, Topic #10599)
+> **Source**: https://gov.optimism.io/t/10599
+> **Focus**: Governance Fund Missions (see Topic #10526)
 > **Portal**: https://app.opgrants.io
 
 ---
