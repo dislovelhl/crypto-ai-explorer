@@ -65,6 +65,17 @@ ENDPOINT_PRICES = {
     "/api/treasury/health": 15,
 }
 
+# Load actual wallet address
+AGENT_WALLET_FILE = Path(__file__).parent.parent.parent / "data" / "agent_wallet.json"
+AGENT_WALLET_ADDRESS = "0xCRYPTOAI_TREASURY_WALLET_ADDRESS"
+if AGENT_WALLET_FILE.exists():
+    try:
+        with open(AGENT_WALLET_FILE, "r") as f:
+            wallet_data = json.load(f)
+            AGENT_WALLET_ADDRESS = wallet_data.get("address", AGENT_WALLET_ADDRESS)
+    except Exception:
+        pass
+
 @app.middleware("http")
 async def x402_payment_middleware(request: Request, call_next: Callable) -> Response:
     # Allow health and root endpoints for free
@@ -92,7 +103,7 @@ async def x402_payment_middleware(request: Request, call_next: Callable) -> Resp
             content={
                 "error": "Payment Required",
                 "message": f"This endpoint requires a payment of ${price_cents/100:.2f} USDC on Base.",
-                "payment_address": "0xCRYPTOAI_TREASURY_WALLET_ADDRESS",
+                "payment_address": AGENT_WALLET_ADDRESS,
                 "payment_network": "base",
                 "payment_token": "usdc",
                 "amount": price_cents / 100
