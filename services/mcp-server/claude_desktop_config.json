@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "cryptoai-explorer": {
+      "command": "python3",
+      "args": ["/home/martin/Documents/crypto-ai-explorer/services/mcp-server/server.py"],
+      "env": {}
+    }
+  }
+}
