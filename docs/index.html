@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoAI Copilot | Treasury & Governance Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .bg-grid { background-image: radial-gradient(#374151 1px, transparent 1px); background-size: 24px 24px; }
+    </style>
+</head>
+<body class="bg-gray-950 text-white bg-grid relative antialiased selection:bg-blue-500 selection:text-white">
+    <!-- Gradient Background -->
+    <div class="absolute inset-0 bg-gradient-to-tr from-gray-950 via-gray-900/80 to-blue-900/30 -z-10"></div>
+    
+    <div class="max-w-6xl mx-auto px-6 pt-20 pb-24">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+                Execution Intelligence <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">for the Decentralized Web</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Stop reading forums. Stop missing grants. Stop leaving treasury yield on the table. We turn 19,000+ data points into actionable intelligence for DAOs, Delegates, and Builders.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#pricing" class="px-8 py-3 rounded-lg font-semibold bg-blue-600 hover:bg-blue-500 transition-colors shadow-lg shadow-blue-600/20">View Delegate Plans</a>
+                <a href="https://github.com/dislovelhl/crypto-ai-explorer" class="px-8 py-3 rounded-lg font-semibold bg-gray-800 hover:bg-gray-700 transition-colors border border-gray-700">Explore API Docs on GitHub</a>
+            </div>
+            <p class="mt-6 text-sm text-emerald-400 font-medium font-mono">● Live: Monitoring Arbitrum, Optimism, Solana, and Base</p>
+        </header>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20 text-center">
+            <div class="bg-gray-900/50 border border-gray-800 p-6 rounded-xl backdrop-blur-sm">
+                <div class="text-3xl font-bold text-white mb-1">19.2K+</div>
+                <div class="text-sm text-gray-400">DeFi Pools Scanned</div>
+            </div>
+            <div class="bg-gray-900/50 border border-gray-800 p-6 rounded-xl backdrop-blur-sm">
+                <div class="text-3xl font-bold text-white mb-1">$2.6B+</div>
+                <div class="text-sm text-gray-400">Agent Token Market</div>
+            </div>
+            <div class="bg-gray-900/50 border border-gray-800 p-6 rounded-xl backdrop-blur-sm">
+                <div class="text-3xl font-bold text-white mb-1">$100K+</div>
+                <div class="text-sm text-gray-400">Grants Tracked</div>
+            </div>
+            <div class="bg-gray-900/50 border border-gray-800 p-6 rounded-xl backdrop-blur-sm">
+                <div class="text-3xl font-bold text-emerald-400 mb-1">x402</div>
+                <div class="text-sm text-gray-400">Agent-Native API</div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid md:grid-cols-3 gap-8 mb-24">
+            <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl hover:border-blue-500/50 transition-colors">
+                <h3 class="text-xl font-bold mb-3 flex items-center gap-2">🏛️ For Delegates</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                    Automated daily digests, proposal risk scoring, and voting impact memos across Arbitrum and Optimism. Never miss a critical vote again.
+                </p>
+            </div>
+            <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl hover:border-emerald-500/50 transition-colors">
+                <h3 class="text-xl font-bold mb-3 flex items-center gap-2">🏦 For Treasuries</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                    Risk-adjusted stablecoin yield routing. We scan 19k pools to find safe, high-APY deployments for idle DAO capital.
+                </p>
+            </div>
+            <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl hover:border-purple-500/50 transition-colors">
+                <h3 class="text-xl font-bold mb-3 flex items-center gap-2">🤖 For Agent Builders</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                    Out-of-the-box MCP server and x402 API. Give your AI agents the ability to read on-chain yields and governance natively using L402 payments.
+                </p>
+            </div>
+        </div>
+
+        <!-- x402 API Preview -->
+        <section class="bg-gray-900 border border-gray-800 rounded-2xl p-8 md:p-12 mb-24 relative overflow-hidden">
+            <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-blue-900/20 to-transparent"></div>
+            <h2 class="text-3xl font-bold mb-4 relative z-10">Agent-to-Agent x402 API</h2>
+            <p class="text-gray-400 max-w-xl mb-8 relative z-10">
+                Building an AI agent? Connect to our intelligence endpoints natively. 
+                Pay per call ($0.05 - $0.15) using USDC on Base via the L402 standard.
+            </p>
+            <div class="bg-black/60 rounded-xl p-6 font-mono text-sm text-gray-300 border border-gray-800 overflow-x-auto relative z-10">
+                <span class="text-green-400">~</span> <span class="text-blue-400">curl</span> -H "Authorization: L402 macaroon:preimage" \ <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;https://api.cryptoai-copilot.com/yields/top?min_tvl=10000000<br><br>
+                <span class="text-gray-500"># Response:</span><br>
+                {<br>
+                &nbsp;&nbsp;"chain": "Base",<br>
+                &nbsp;&nbsp;"protocol": "Avantis",<br>
+                &nbsp;&nbsp;"apy": 10.5,<br>
+                &nbsp;&nbsp;"tvl_usd": 83000000,<br>
+                &nbsp;&nbsp;"stablecoin": true<br>
+                }
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">Actionable Intelligence Pricing</h2>
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto text-left">
+                
+                <!-- Plan 1 -->
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl flex flex-col">
+                    <h3 class="text-xl font-bold mb-2">Delegate Digest</h3>
+                    <div class="text-3xl font-extrabold mb-4">$79<span class="text-lg text-gray-500 font-normal">/mo</span></div>
+                    <p class="text-gray-400 text-sm mb-6">For individual delegates to maintain high context efficiently.</p>
+                    <ul class="text-sm text-gray-300 space-y-3 mb-8 flex-grow">
+                        <li class="flex items-center gap-2">✓ Daily Telegram alerts</li>
+                        <li class="flex items-center gap-2">✓ 1 Supported DAO (OP or ARB)</li>
+                        <li class="flex items-center gap-2">✓ Voting impact summaries</li>
+                        <li class="flex items-center gap-2">✓ Proposal risk scoring</li>
+                    </ul>
+                    <a href="mailto:hello@example.com" class="block w-full text-center px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg font-medium transition-colors">Request Access</a>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="bg-gray-900 border border-blue-500/50 p-8 rounded-2xl flex flex-col relative">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl">POPULAR</div>
+                    <h3 class="text-xl font-bold mb-2">Treasury Pro</h3>
+                    <div class="text-3xl font-extrabold mb-4">$499<span class="text-lg text-gray-500 font-normal">/mo</span></div>
+                    <p class="text-gray-400 text-sm mb-6">For DAO treasury committees managing idle stablecoins.</p>
+                    <ul class="text-sm text-gray-300 space-y-3 mb-8 flex-grow">
+                        <li class="flex items-center gap-2">✓ Custom stablecoin yield thresholds</li>
+                        <li class="flex items-center gap-2">✓ TVL drop & smart contract risk alerts</li>
+                        <li class="flex items-center gap-2">✓ Bi-weekly treasury reallocation memos</li>
+                        <li class="flex items-center gap-2">✓ Cross-chain coverage (19k+ pools)</li>
+                    </ul>
+                    <a href="mailto:hello@example.com" class="block w-full text-center px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg font-medium transition-colors">Start Pilot</a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl flex flex-col">
+                    <h3 class="text-xl font-bold mb-2">Agent API (x402)</h3>
+                    <div class="text-3xl font-extrabold mb-4">Pay-per-call</div>
+                    <p class="text-gray-400 text-sm mb-6">Raw JSON endpoints for your own bots and autonomous workflows.</p>
+                    <ul class="text-sm text-gray-300 space-y-3 mb-8 flex-grow">
+                        <li class="flex items-center gap-2">✓ Governance summaries ($0.10/call)</li>
+                        <li class="flex items-center gap-2">✓ Top filtered yields ($0.05/call)</li>
+                        <li class="flex items-center gap-2">✓ Treasury health checks ($0.15/call)</li>
+                        <li class="flex items-center gap-2">✓ Settled in USDC on Base via L402</li>
+                    </ul>
+                    <a href="https://github.com/dislovelhl/crypto-ai-explorer" class="block w-full text-center px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg font-medium transition-colors">View API Docs</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-gray-800 pt-8 mt-16 text-center text-gray-500 text-sm flex flex-col items-center gap-4">
+            <p>An open-source intelligence initiative.</p>
+            <div class="flex gap-4">
+                <a href="https://github.com/dislovelhl/crypto-ai-explorer" class="hover:text-white transition-colors">GitHub</a>
+                <a href="#" class="hover:text-white transition-colors">API Docs</a>
+                <a href="#" class="hover:text-white transition-colors">Twitter</a>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
