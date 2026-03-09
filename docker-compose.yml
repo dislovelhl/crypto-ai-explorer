@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  x402-api:
+    build: .
+    ports:
+      - "8402:8402"
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import httpx; httpx.get('http://localhost:8402/')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  governance-bot:
+    build: .
+    command: python3 services/governance-bot/bot.py
+    volumes:
+      - ./data:/app/data
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    depends_on:
+      - x402-api
